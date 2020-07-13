@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IndexView = props => {
+const IndexView = () => {
     return (
         <container>
             <div>

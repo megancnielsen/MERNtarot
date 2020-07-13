@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShopView = props => {
+const ShopView = () => {
     return (
         <container>
             <div>
