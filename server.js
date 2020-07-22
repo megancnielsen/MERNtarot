@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
-require('./config/mongoose.config');
+require('./server/config/mongoose.config');
 
 app.listen(port, () => console.log(`I'm in on port ${port}`));
 
