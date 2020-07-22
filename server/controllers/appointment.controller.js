@@ -5,29 +5,33 @@ module.exports.helloWorld = (req, res) => {
 };
 
 module.exports.findAllAppointments = (req, res) => {
-    Appointment.find()
-        .then((appointments) => console.log(appointments))
+    Appointment.find({})
+        .then((appointments) =>
+            res.json({
+                message: appointments,
+            })
+        )
         .catch((err) =>
             res.json({
-                message: 'Cannot find any appointments',
+                message: `Cannot find any appointments`,
                 error: err,
             })
         );
 };
 
-module.exports.postNewAppointment = (req, res) => {
-    Appointment.create(req.body).then((newAppointment) =>
-        res
-            .json({
+module.exports.createAppointment = (req, res) => {
+    Appointment.create(req.body)
+        .then((newAppointment) => {
+            res.json({
                 appointment: newAppointment,
-            })
-            .catch((err) => {
-                res.json({
-                    message: 'Cannot find any appointments',
-                    error: err,
-                });
-            })
-    );
+            });
+        })
+        .catch((err) => {
+            res.json({
+                message: `couldn't save appointment. Please try again`,
+                error: err,
+            });
+        });
 };
 
 // console.log(req.body);

@@ -1,9 +1,11 @@
-const AppointmentController = require('../controllers/appointment.controller');
-
-const { helloWorld, findAllAppointments, postNewAppointment } = AppointmentController;
+const {
+    helloWorld,
+    findAllAppointments,
+    createAppointment,
+} = require('../controllers/appointment.controller');
 
 module.exports = (app) => {
     app.get('/api/', helloWorld);
+    app.post('/api/appointments', createAppointment);
     app.get('/api/appointments', findAllAppointments);
-    app.post('/api/appointments', postNewAppointment);
 };

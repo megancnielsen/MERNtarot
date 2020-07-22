@@ -4,11 +4,10 @@ const port = 8000;
 
 require('./server/config/mongoose.config');
 
-app.listen(port, () => console.log(`I'm in on port ${port}`));
+app.use(express.json(), express.urlencoded({ extended: true }));
 
 // sends express() to routes module
 const AllApiRoutes = require('./server/routes/appointment.routes');
 AllApiRoutes(app);
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.listen(port, () => console.log(`I'm in on port ${port}`));
