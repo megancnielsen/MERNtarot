@@ -7,7 +7,7 @@ require('./server/config/mongoose.config');
 app.listen(port, () => console.log(`I'm in on port ${port}`));
 
 // sends express() to routes module
-const AllApiRoutes = require('./routes/appointment.routes');
+const AllApiRoutes = require('./server/routes/appointment.routes');
 AllApiRoutes(app);
 
 app.use(express.json());

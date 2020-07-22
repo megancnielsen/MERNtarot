@@ -1,11 +1,9 @@
-module.exports = (app) => {
-    app.get('/api', (req, res) => {
-        res.json({ message: 'Hello World' });
-    });
+const AppointmentController = require('../controllers/appointment.controller');
 
-    app.post('/api/appointmentSchema', (req, res) => {
-        console.log(req.body);
-        appointmentSchema.push(req.body);
-        res.json({ status: 'ok' });
-    });
+const { helloWorld, findAllAppointments, postNewAppointment } = AppointmentController;
+
+module.exports = (app) => {
+    app.get('/api/', helloWorld);
+    app.get('/api/appointments', findAllAppointments);
+    app.post('/api/appointments', postNewAppointment);
 };
