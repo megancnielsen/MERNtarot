@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "tarot",
   "version": "1.0.0",
   "description": "",
@@ -23,4 +24,29 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.24"
   }
+=======
+    "name": "tarot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/megancnielsen/MERNtarot.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/megancnielsen/MERNtarot/issues"
+    },
+    "homepage": "https://github.com/megancnielsen/MERNtarot#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongoose": "^5.9.25"
+    }
+>>>>>>> 9f5b9f2df3e65bef1e242f76669a1a0079f3cb30
 }
